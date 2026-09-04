@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Random Joke Generator</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f7fafc;margin:0}
+    main{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.08);max-width:720px;width:100%;}
+    button{padding:0.6rem 1rem;font-size:1rem;border-radius:6px;border:1px solid #e2e8f0;background:#3182ce;color:#fff;cursor:pointer}
+    #joke p{margin:0 0 0.75rem}
+    #setup{font-weight:600}
+    #punchline{color:#2d3748}
+    .controls{margin-top:1rem;display:flex;gap:1rem;align-items:center}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Random Joke Generator</h1>
+    <div id="joke" aria-live="polite">
+      <p id="setup">Click "Get a joke" to load one.</p>
+      <p id="punchline"></p>
+    </div>
+
+    <div class="controls">
+      <button id="getJoke">Get a joke</button>
+      <label style="display:flex;align-items:center;gap:.5rem"><input type="checkbox" id="autoPlay"> Auto-fetch every 10s</label>
+    </div>
+
+    <p style="margin-top:1rem;color:#4a5568;font-size:.9rem">Uses the Official Joke API: <a href="https://official-joke-api.appspot.com/" target="_blank" rel="noopener">official-joke-api.appspot.com</a></p>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
